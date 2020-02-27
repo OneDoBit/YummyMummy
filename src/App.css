@@ -144,6 +144,12 @@ body {
     height: 100%;
 }
 
+#svg-text
+{
+    font-family: Font Mutabor;
+    font-size: 10px;
+}
+
 @keyframes scroll {
     0% {
         background-position: 0%;
@@ -205,7 +211,7 @@ body {
 /* ******************* */
 
 #maindiv {
-    background-color: #304fad;
+    background-color: #284DA9;
     height: 100vh;
     width: 100vw;
 }
@@ -215,25 +221,36 @@ body {
 {
     display: inline-block;
     width: 30%;
-    height: 2.79vw;
+    padding: 10px;
+    /* height: 2.79vw; */
     border-radius: 10px;
-    background-image: url("components/images/button.png");
+    /* background-image: url("components/images/button.png"); */
+    background-color: black;
     background-size: contain;
     background-repeat: no-repeat;
     box-shadow: 0px 5px 0px rgba(0,0,0,0.3);
     cursor: pointer;
     transition: 0.3s;
+    transform: translateY(-10px);
+}
+
+#btndiv p
+{
+    font-family: Font Mutabor;
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
 }
 
 #btndiv:hover
 {
-    transform: translateY(1px);
+    transform: translateY(-9px);
     box-shadow: 0px 4px 0px rgba(0,0,0,0.3);
 }
 
 #btndiv:active
 {
-    transform: translateY(4px);
+    transform: translateY(-5px);
     box-shadow: 0px 1px 0px rgba(0,0,0,0.3);
 }
 
@@ -428,9 +445,9 @@ body {
 }
 
 #cardDiv {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
+    display: inline-block;
+    /* flex-direction: row; */
+    /* flex-flow: wrap; */
     width: 92vw;
     margin-left: calc(1vw + 30px);
     height: 31vh;
@@ -453,11 +470,28 @@ svg {
     font-family: Pilowlava-Regular;
 }
 
+.image-card-wrapper
+{
+    height: 70%;
+    width: auto;
+}
+
 .flip-card {
     background-color: transparent;
-    width: 150px;
+    width: 25vh;
     height: 100%;
     perspective: 1000px;
+  }
+
+  .product-image
+  {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px #111 solid;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 105%;
   }
   
   .flip-card-inner {
@@ -501,7 +535,7 @@ svg {
     font-size: 6px;
     text-align: center;
     height: 21%;
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
     background-color: #ffbe00;
     border: 1px #111 solid;
   }
@@ -513,11 +547,11 @@ svg {
 }
 
 #Cards {
-    /* height: 100%;
-    width: 150px; */
+    height: 112%;
+    width: 300px; 
     /* background-color: blanchedalmond; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     transition: all 0.5s ease;
     overflow: hidden;
 }

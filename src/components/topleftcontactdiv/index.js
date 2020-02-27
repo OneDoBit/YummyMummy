@@ -48,6 +48,7 @@ function topleftcontact() {
 
           <div id="addressbtndiv">
             <div id="btndiv">
+              <p>подробнее</p>
             </div>
             <div id="textdiv" class="belowtext">
               {/* <img src={textData} id="textimg" height="50px" width="80%"></img> */}

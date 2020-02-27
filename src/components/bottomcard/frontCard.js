@@ -3,6 +3,10 @@ import Image from "../images/backpageicon.png";
 import BackImage1 from "../images/backtext.png";
 import backImg from "../images/back.png";
 function Card(props) {
+  const divStyle = {
+    backgroundImage: `url(${props.src})`,
+    // backgroundSize: 'cover' 
+  };
   return (
     <>
       <div id="Cards">
@@ -74,7 +78,10 @@ function Card(props) {
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src={props.src} alt="Avatar"></img>
+              {/* <img src={props.src} alt="Avatar"></img> */}
+              <div class="image-card-wrapper">
+                <div class="product-image" style={divStyle}></div>
+              </div>
               <p>Без глютена, яиц, молока, животных жиров, мёда, красителей, консерантов, стабилизаторов</p>
             </div>
             <div class="flip-card-back">

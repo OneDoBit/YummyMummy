@@ -450,7 +450,7 @@ body {
     /* flex-flow: wrap; */
     width: 92vw;
     margin-left: calc(1vw + 30px);
-    height: 31vh;
+    height: calc(100vh - 60px - 4vh - 55vh);
     top: 0%;
     left: 0%;
     /* position: fixed; */
@@ -531,9 +531,10 @@ svg {
     width: 100%;
     height: 30%;
     font-family: Font Mutabor;
-    /* font-size: calc(0.3vw + 0.3vh + 0.3vmin); */
-    padding-top: 8px;
-    font-size: 6px;
+    font-size: calc(0.3vw + 0.3vh + 0.3vmin);
+    line-height: 130%;
+    padding-top: 6%;
+    /* font-size: 6px; */
     text-align: center;
     /* height: 21%; */
     /* transform: translateY(-4px); */
@@ -548,7 +549,7 @@ svg {
 }
 
 #Cards {
-    height: 112%;
+    height: 100%;
     width: 300px; 
     /* background-color: blanchedalmond; */
     /* display: flex; */

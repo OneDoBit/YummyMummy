@@ -445,9 +445,9 @@ body {
 }
 
 #cardDiv {
-    display: inline-block;
-    /* flex-direction: row; */
-    /* flex-flow: wrap; */
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
     width: 92vw;
     margin-left: calc(1vw + 30px);
     height: calc(100vh - 60px - 4vh - 55vh);
@@ -488,10 +488,28 @@ svg {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border: 3px #111 solid;
+      border: 2px #111 solid;
       background-repeat: no-repeat;
       background-position: center;
       background-size: 105%;
+  }
+
+  .flip-card-back .product-image
+  {
+      width: 100%;
+      height: 50%;
+      border-radius: 50%;
+      border: 0px red solid;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 25%;
+  }
+
+  .flip-card-back .image-card-wrapper p{
+      transform: translateY(-20px);
+      font-size: 7px;
+      border: 0;
+      background-color: transparent;
   }
   
   .flip-card-inner {
@@ -542,15 +560,32 @@ svg {
     border: 1px #111 solid;
   }
   
+  .flip-card-back p
+  {
+    width: 100%;
+    height: 30%;
+    font-family: Font Mutabor;
+    font-size: calc(0.6vw + 0.5vh + 0.5vmin);
+    line-height: 130%;
+    padding-top: 12%;
+    /* font-size: 6px; */
+    text-align: center;
+    color: #000;
+    /* height: 21%; */
+    /* transform: translateY(-4px); */
+    background-color: #ffbe00;
+    border: 1px #111 solid;
+  }
+
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: #ffbe00;
+    /* color: white; */
     transform: rotateY(180deg);
 }
 
 #Cards {
     height: 100%;
-    width: 300px; 
+    width: 150px; 
     /* background-color: blanchedalmond; */
     /* display: flex; */
     /* flex-direction: column; */

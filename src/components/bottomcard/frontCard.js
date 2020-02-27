@@ -7,6 +7,10 @@ function Card(props) {
     backgroundImage: `url(${props.src})`,
     // backgroundSize: 'cover' 
   };
+  const divStyle2 = {
+    backgroundImage: `url(${Image})`,
+    // backgroundSize: 'cover' 
+  };
   return (
     <>
       <div id="Cards">
@@ -78,16 +82,17 @@ function Card(props) {
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              {/* <img src={props.src} alt="Avatar"></img> */}
               <div class="image-card-wrapper">
                 <div class="product-image" style={divStyle}></div>
               </div>
-              <p>Без глютена, яиц, молока, животных жиров, мёда, красителей, консерантов, стабилизаторов</p>
+              <p>Без глютена, яиц, молока, животных жиров, мёда, красителей, консерантов, стабилизаторов </p>
             </div>
             <div class="flip-card-back">
-              <h1>John Doe</h1> 
-              <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
+            <div class="image-card-wrapper">
+                <div class="product-image" style={divStyle2}></div>
+                <p>Без глютена, яиц, молока, животных жиров, мёда, красителей, консерантов, стабилизаторов <br></br><br></br>яиц, молока, животных жиров</p>
+              </div>
+              <p>Без глютена</p>
             </div>
           </div>
         </div>

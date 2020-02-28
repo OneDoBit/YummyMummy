@@ -635,7 +635,7 @@ svg {
 
 .image-card-wrapper
 {
-    height: 70%;
+    height: 80%;
     width: auto;
 }
 
@@ -710,11 +710,11 @@ svg {
   .flip-card-front p
   {
     width: 100%;
-    height: 30%;
+    height: 20%;
     font-family: Font Mutabor;
-    font-size: calc(0.3vw + 0.3vh + 0.3vmin);
-    line-height: 130%;
-    padding-top: 6%;
+    font-size: calc(0.3vw + 0.2vh + 0.2vmin);
+    /* line-height: 130%; */
+    padding-top: 4%;
     /* font-size: 6px; */
     text-align: center;
     /* height: 21%; */
@@ -726,11 +726,11 @@ svg {
   .flip-card-back p
   {
     width: 100%;
-    height: 30%;
+    height: 20%;
     font-family: Font Mutabor;
     font-size: calc(0.6vw + 0.5vh + 0.5vmin);
     line-height: 130%;
-    padding-top: 12%;
+    padding-top: 7%;
     /* font-size: 6px; */
     text-align: center;
     color: #000;
@@ -905,7 +905,7 @@ svg {
     height: 150px;
     /* background-color: chartreuse; */
     background-size: contain;
-    background-image: url("./components/images/topright_noeyes.png");
+    background-image: url("./components/images/topleft_rightimgred.png");
     /* position: relative;
     left: 50%;
     top: 50%;
@@ -1234,6 +1234,18 @@ svg {
         font-size: calc(0.8vw + 0.6vh + 0.5vmin);
     }
 
+}
+
+@media screen and (min-height: 800px) 
+{
+    .face
+    {
+        transform: scale(1.5);
+    }
+    .rot2
+    {
+        transform: scale(1.5);
+    }
 }
 
 

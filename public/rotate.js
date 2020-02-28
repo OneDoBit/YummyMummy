@@ -1,4 +1,4 @@
-var divleft = document.getElementsByClassName("face");
+// var divleft = document.getElementsByClassName("face");
 var divright = document.getElementsByClassName("face2");
 var cardDiv = document.getElementsByClassName("cardi");
 var angle = 0;
@@ -18,10 +18,10 @@ document.onwheel = function (e) {
       i = 0;
     }
 
-    angle += e.deltaY < 0 ? 10 : -10;
+    // angle += e.deltaY < 0 ? 10 : -10;
     angle2 += e.deltaY < 0 ? -10 : 10;
 
-    divleft[0].style.transform = "rotate(" + angle + "deg)";
+    // divleft[0].style.transform = "rotate(" + angle + "deg)";
     divright[0].style.transform = "rotate(" + angle2 + "deg)";
 
     
@@ -58,10 +58,10 @@ document.onwheel = function (e) {
   {
     i--
 
-    angle += e.deltaY < 0 ? 10 : -10;
+    // angle += e.deltaY < 0 ? 10 : -10;
     angle2 += e.deltaY < 0 ? -10 : 10;
 
-    divleft[0].style.transform = "rotate(" + angle + "deg)";
+    // divleft[0].style.transform = "rotate(" + angle + "deg)";
     divright[0].style.transform = "rotate(" + angle2 + "deg)";
 
     

@@ -12,6 +12,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: visible !important; */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+*{
+   -ms-overflow-style: none;
 }
 
 html,
@@ -20,12 +29,19 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    scrollbar-width: none;  
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 }
 
 #rootdiv1 {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    /* margin-top: 4vh; */
+    /* height: 2000%; */
+    /* display: flex; */
+    display: inline-block;
+    background-color: black;
+    /* overflow: visible; */
 }
 
 #fronttext {
@@ -33,18 +49,26 @@ body {
 }
 
 #rootdiv {
-    display: flex;
+    /* display: flex; */
+    overflow: hidden;
 }
 
+/* .lrroot
+{
+    overflow: visible !important;
+} */
+
 #backimgsection {
-    margin-top: 50px;
-    height: 30%;
+    margin-top: calc(30px + 2vh + 60px);
+    margin-bottom: 50px;
+    height: 20%;
+    text-align: center;
 }
 
 #backimg {
     max-height: 100%;
-    background-size: cover;
-    margin-left: 40.5vw;
+    /* background-size: cover;
+    margin-left: 40.5vw; */
 }
 
 #backtextsection {
@@ -52,16 +76,22 @@ body {
 }
 
 #backtext {
-    /* margin-left: 19vw; */
-    overflow: hidden;
+    margin-bottom: calc(30px + 2vw) !important;
+    /* overflow: hidden; */
     margin-top: 30px;
-    height: 50vh;
+    /* height: 50vh; */
+    color: #FFF;
+    font-family: Font Mutabor;
+    width: 60%;
+    text-align: center;
+    margin: 20px auto;
+    font-size: calc(1vw + 0.8vh + 0.6vmin);
 }
 
 #text1 {
     height: 10vh;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 70%;
     margin: auto;
 }
@@ -69,7 +99,7 @@ body {
 #text2 {
     height: 25vh;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 70%;
     margin: auto;
 }
@@ -77,7 +107,7 @@ body {
 #text3 {
     height: 17vh;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 70%;
     margin: auto;
 }
@@ -91,13 +121,6 @@ body {
 
 #middiv {
     width: 100%;
-}
-
-#rootdiv1 {
-    margin-top: 4vh;
-    height: 92.4vh;
-    display: flex;
-    background-color: black;
 }
 
 .App {
@@ -214,6 +237,33 @@ body {
     background-color: #284DA9;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+}
+
+.box {
+    display: inline-block;
+    background-color: #ffbe00;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    /* filter: contrast(0.5) grayscale(100%); */
+    overflow: hidden;
+}
+
+body
+{
+    width: 100vw;
+        height: 100vh;
+}
+
+canvas {
+    /* background: transparent; */
+    overflow: hidden;
+    /* width: 100%; */
+    position: absolute;
+    top: 20%;
+    /* opacity: 0.9; */
+    /* filter: contrast(0.5) grayscale(100%); */
 }
 
 
@@ -258,14 +308,51 @@ body {
     font-family: Font Mutabor;
     display: inline-block;
     width: calc(70% - 30px);
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: calc(0.3vw + 0.2vh + 0.4vmin);
     margin-left: 20px;
+    color: #FFF;
 }
 
 #contact
 {
     margin-bottom: 10px;
+    color: #FFF;
+}
+
+#contact2
+{
+    font-family: Pilowlava-Regular;
+    color: #FFF;
+    position: relative;
+    top: 25%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+#textimg2
+{
+    color: #FFF;
+    font-family: Font Mutabor;
+    font-size: 10px;
+    position: relative;
+    top: 35%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.madeby
+{
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-family: Font Mutabor;
+    font-size: 10px;
+    border-radius: 10px;
+    border: 1px white solid;
+    padding: 10px 20px;
 }
 
 .contact-wrapper
@@ -274,6 +361,39 @@ body {
     left: 57%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.contact-wrapper2
+{
+    position: relative;
+    left: 0%;
+    top: 0%;
+    transform: translate(0%, 0%);
+}
+
+a{
+    color: white;
+}
+
+.info-contact
+{
+    width: calc(95vw - 60px - 2vw);
+    height: 130px;
+    margin-left: calc(30px + 1vw);
+    position: relative;
+    top: calc(-30px - 1vw);
+    border: 1px white solid;
+    display: inline-block;
+}
+
+#social_icons2
+{
+    border: 1px solid white;
+    width: 5vw;
+    height: 130px;
+    display: inline-block;
+    position: relative;
+    top: 13.5px;
 }
 
 #textdiv1 {
@@ -304,7 +424,7 @@ body {
     margin-top: 50px;
     margin-left: 5.8vw;
     width: 14vw;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #backimage {
@@ -324,7 +444,7 @@ body {
     margin-top: 50px;
     right: -10px;
     margin-left: 7vw;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     border-radius: 50%;
     width: 14vw;
 }
@@ -346,7 +466,7 @@ body {
 
 #topborderdiv {
     margin-bottom: 0px !important;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #topborderdiv1 {
@@ -423,20 +543,61 @@ body {
 
 
 #instagram {
-    background-image: url("./components/images/inst_white.png");
+    background-image: url("./components/images/inst_yellow-inverted.png");
     background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: aqua;
+    background-color: black;
     height: 50%;
 }
 
+#instagram:active{
+    background-image: url("./components/images/inst_yellow.png");
+}
+
+.instg:active
+{
+    background-color: #ffbe00 !important;
+}
+
 #facebook {
-    background-image: url("./components/images/Facebook.png");
+    background-image: url("./components/images/Facebook-yellow.png");
     background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #ffbe00;
     height: 50%;
+}
+
+#facebook:active{
+    background-image: url("./components/images/Facebook-yellow-inverted.png");
+}
+
+.faceb:active
+{
+    background-color: #000 !important;
+}
+
+.info-fb
+{
+    background-color: white !important;
+    background-image: url("./components/images/Facebook.png") !important;
+}
+
+.info-in
+{
+    background-color: black !important;
+    background-image: url("./components/images/inst_white.png") !important;
+}
+
+.info-fb:active
+{
+    filter: invert(1);
+}
+
+.info-in:active
+{
+    filter: invert(1);
 }
 
 #backbottomimg {
@@ -446,13 +607,15 @@ body {
 
 #cardDiv {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row;
     flex-flow: wrap;
-    width: 92vw;
+    flex: 0 1 100%; */
+    width: 94vw;
     margin-left: calc(1vw + 30px);
     height: calc(100vh - 60px - 4vh - 55vh);
     top: 0%;
     left: 0%;
+    overflow: hidden;
     /* position: fixed; */
 }
 
@@ -585,13 +748,15 @@ svg {
 
 #Cards {
     height: 100%;
-    width: 150px; 
+    width: 25vh; 
     /* background-color: blanchedalmond; */
     /* display: flex; */
     /* flex-direction: column; */
     transition: all 0.5s ease;
-    overflow: hidden;
+    overflow: hidden; 
+    border: 1px solid #111;  
 }
+
 
 #frontimgdiv
 {
@@ -684,12 +849,29 @@ svg {
     height: 100%;
 }
 
+.rot-wrap2
+{
+    margin-top: calc(30px + 2vh);
+    width: 100%;
+    height: 40vh;
+}
+
 .rot2
 {
     width: 150px;
     height: 150px;
     position: absolute;
     right: 0;
+}
+
+.rotInfo
+{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .face {
@@ -705,12 +887,38 @@ svg {
     border-radius: 50%;
 }
 
+.face-b {
+    width: 150px;
+    height: 150px;
+    /* background-color: chartreuse; */
+    background-size: contain;
+    background-image: url("./components/images/topleft.png");
+    /* position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    border-radius: 50%;
+}
+
 .face2 {
     width: 150px;
     height: 150px;
     /* background-color: chartreuse; */
     background-size: contain;
     background-image: url("./components/images/topright_noeyes.png");
+    /* position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    border-radius: 50%;
+}
+
+.face6 {
+    width: 150px;
+    height: 150px;
+    /* background-color: chartreuse; */
+    background-size: contain;
+    background-image: url("./components/images/infopageimg1.png");
     /* position: relative;
     left: 50%;
     top: 50%;
@@ -806,11 +1014,226 @@ svg {
     margin-left: 2px;
 }
 
+.wrapper5 {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 18px;
+    height: 22px;
+    position: relative;
+    top: 38%;
+    overflow: hidden;
+    /* background-color: aquamarine; */
+    left: 33.5%;
+}
+
+.eye5 {
+    background-image: url("./components//images//ebleft.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 22px;
+    margin-left: 2px;
+}
+
+.wrapper6 {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 18px;
+    height: 22px;
+    position: relative;
+    top: 23%;
+    overflow: hidden;
+    /* background-color: aquamarine; */
+    left: 56%;
+}
+
+.eye6 {
+    /* background-color: coral; */
+    border-radius: 50%;
+    background-image: url("./components//images//ebleft.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 11px;
+    height: 22px;
+    margin-left: 2px;
+}
+
 #cardimg img {
     /* height: 20%; */
     max-width: 100%;
     /* min-width: 100%; */
     /* width: 100%; */
+}
+
+.mobile-box
+{
+    width: 140%;
+    height: 300px;
+    position: relative;
+    left: -20%;
+    top: 25%;
+    /* background-color: #ffbe00; */
+    background-image: url(./components/images/box-info.png);
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.mobile-social, .mobile-text
+{
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    #topbottom, #topbottom1
+    {
+        background-size: 70% 30px;
+    }
+
+    .face6
+    {
+        transform: scale(1.5);
+    }
+
+    .mobile-box
+    {
+        display: block;
+    }
+
+    .mobile-social
+    {
+        display: block;
+        height: 70px;
+        border: 2px solid black;
+        margin-top: 20px;
+    }
+
+    .mobile-social #facebook, .mobile-social #instagram
+    {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        background-size: 30%;
+    }
+
+    .mobile-text
+    {
+        display: block;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-family: Font Mutabor;
+        /* width: 100%; */
+    }
+
+    .bekishev
+    {
+        text-decoration: underline;
+    }
+
+    .info-contact
+    {
+        margin-top: 20px;
+        background-color: #FFF;
+        width: calc(100vw - 60px - 2vw);
+        color: black;
+        height: 300px;
+    }
+
+    #social_icons2, #textimg2, .madeby
+    {
+        display: none;
+    }
+
+    #contact2
+    {
+        color: black;
+        position: unset;
+        transform: translate(0);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .rot2
+    {
+        display: none;
+    }
+
+    #topflex
+    {
+        flex-flow: column;
+        height: 80%;
+    }
+
+    .circles
+    {
+        width: unset;
+    }
+
+    #social_icons
+    {
+        display: none;
+    }
+
+    #contact
+    {
+        width: 100%;
+        font-size: 20px;
+        line-height: 80px;
+        text-align: center;
+        height: 80px;
+        border-bottom: 1.5px solid black;
+    }
+
+    #topleftcontactdiv
+    {
+        height: 50%;
+    }
+
+    #topleftimg
+    {
+        height: 100%;
+    }
+
+    .face
+    {
+        transform: scale(1.5) !important;
+    }
+
+    #toprightdiv
+    {
+        display: none;
+    }
+
+    .contact-wrapper
+    {
+        position: unset;
+        transform: translate(0);
+    }
+
+    #belowtopleftcontactdiv
+    {
+        width: 100%;
+    }
+
+    #topleftdiv
+    {
+        width: 100%;
+    }
+
+    #btndiv
+    {
+        display: none;
+    }
+
+    #textdiv
+    {
+        width: calc(100% - 30px);
+        font-size: calc(0.8vw + 0.6vh + 0.5vmin);
+    }
+
 }
 
 

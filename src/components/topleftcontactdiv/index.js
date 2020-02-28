@@ -25,10 +25,6 @@ import contactNumber from "../images/contactnumber.png";
 //   }
 // };
 
-const changePage = () => {
-  window.location.pathname = "/about";
-};
-
 function topleftcontact() {
   return (
     <>
@@ -42,12 +38,12 @@ function topleftcontact() {
               height="40px"
               width="180px"
             ></img> */}
-            <h2 id="contact"> +8(985) 788-85-78</h2>
+            <h2 id="contact"> +7(986) 784-95-43</h2>
             <div id="textdiv1" class="sidetextdiv"></div>
           </div>
 
           <div id="addressbtndiv">
-            <div id="btndiv">
+            <div id="btndiv" onClick={() =>{ window.location.pathname = "/about"; }}>
               <p>подробнее</p>
             </div>
             <div id="textdiv" class="belowtext">
@@ -62,20 +58,14 @@ function topleftcontact() {
         </div>
         </div>
         <div id="social_icons">
-          <div
-            id="facebook"
-            style={{ backgroundColor: "#FEBB00" }}
-            
-          >
-            {/* <img src={facebook} id="facebookimg"></img> */}
-          </div>
-          <div
-            id="instagram"
-            style={{ backgroundColor: "black" }}
-           
-          >
-            {/* <img src={instagram} id="instagramimg"></img> */}
-          </div>
+          <a href="https://facebook.com"><div
+            id="facebook" class="faceb"
+            style={{ backgroundColor: "#FEBB00" }}>
+          </div></a>
+          <a href="https://instagram.com"><div
+            id="instagram" class="instg"
+            style={{ backgroundColor: "black" }}>
+          </div></a>
         </div>
       </div>
     </>

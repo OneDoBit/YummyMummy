@@ -38,7 +38,7 @@ function toprightdiv() {
             <ellipse id="textPath03" data-reactid="15" fill="yellow" cx="50%" cy="50%" rx="50%" ry="50%" />
           </defs>
           <use xmlnsXlink="#textPath03" fill="yellow" stroke="red" data-reactid="19"></use>
-          <text id="svg-text" letter-spacing="1px" textLength="702%" dangerouslySetInnerHTML={{__html: textPath }} y="-5"></text>;
+          <text id="svg-text" letter-spacing="1px" fill="#FFF" textLength="702%" dangerouslySetInnerHTML={{__html: textPath }} y="-5"></text>;
         </svg>
     </div >
       </div>
